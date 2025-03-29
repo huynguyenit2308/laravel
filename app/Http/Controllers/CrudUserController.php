@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Hash;
-use Session;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,7 +57,7 @@ class CrudUserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'phone' => 'required|string|unique:users,phone|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'phone' => 'required',
             'address' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
