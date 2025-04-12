@@ -15,8 +15,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Tên</th>
-                                        <th>Địa chỉ</th>
-                                        <th>SĐT</th>
+                                        <th>Github</th>
                                         <th>Email</th>
                                         <th>Hành động</th>
                                     </tr>
@@ -26,8 +25,7 @@
                                         <tr>
                                             <td>{{ $user->id }}</td>
                                             <td>{{ $user->name }}</td>
-                                            <td>{{ $user->address }}</td>
-                                            <td>{{ $user->phone }}</td>
+                                            <td>{{ $user->github }}</td>
                                             <td>{{ $user->email }}</td>
                                             <td>
                                                 <a href="{{ route('user.readUser', ['id' => $user->id]) }}"
