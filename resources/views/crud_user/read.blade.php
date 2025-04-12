@@ -15,6 +15,8 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
                                     <th>Email</th>
                                 </tr>
                             </thead>
@@ -22,6 +24,8 @@
                                 <tr>
                                     <td>{{ $messi->id }}</td>
                                     <td>{{ $messi->name }}</td>
+                                    <td>{{ $messi->address }}</td>
+                                    <td>{{ $messi->phone }}</td>
                                     <td>{{ $messi->email }}</td>
                                 </tr>
                             </tbody>
