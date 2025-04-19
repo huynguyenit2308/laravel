@@ -18,13 +18,6 @@
                                     @endif
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Github" id="github" class="form-control"
-                                        name="github" required autofocus>
-                                    @if ($errors->has('github'))
-                                        <span class="text-danger">{{ $errors->first('github') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
                                     <input type="text" placeholder="Email" id="email_address" class="form-control"
                                         name="email" required>
                                     @if ($errors->has('email'))

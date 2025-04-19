@@ -15,7 +15,6 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Github</th>
                                     <th>Email</th>
                                 </tr>
                             </thead>
@@ -23,7 +22,6 @@
                                 <tr>
                                     <td>{{ $messi->id }}</td>
                                     <td>{{ $messi->name }}</td>
-                                    <td>{{ $messi->github }}</td>
                                     <td>{{ $messi->email }}</td>
                                 </tr>
                             </tbody>

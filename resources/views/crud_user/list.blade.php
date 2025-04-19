@@ -15,8 +15,8 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Tên</th>
-                                        <th>Github</th>
                                         <th>Email</th>
+                                        <th>Role</th>
                                         <th>Hành động</th>
                                     </tr>
                                 </thead>
@@ -25,8 +25,14 @@
                                         <tr>
                                             <td>{{ $user->id }}</td>
                                             <td>{{ $user->name }}</td>
-                                            <td>{{ $user->github }}</td>
                                             <td>{{ $user->email }}</td>
+                                            <td>
+                                                @foreach($user->roles as $role)
+                                                    <a href="{{ route('user.role', ['id' => $role->id]) }}">
+                                                        {{ $role->name . '-' }}
+                                                    </a>
+                                                @endforeach
+                                                </td>
                                             <td>
                                                 <a href="{{ route('user.readUser', ['id' => $user->id]) }}"
                                                     class="btn btn-sm btn-info">Xem</a>
@@ -40,6 +46,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {!! $users->withQueryString()->links('pagination::bootstrap-5') !!}
                         </div>
                     </div>
                 </div>
